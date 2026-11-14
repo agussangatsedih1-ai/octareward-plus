@@ -27,16 +27,14 @@
             <id>placeholderapi</id>
             <url>https://repo.helpch.at/releases</url>
         </repository>
-        <repository>
-            <id>essentialsx-releases</id>
-            <url>https://repo.essentialsx.net/releases/</url>
-        </repository>
-        <repository>
-            <id>dustplanet-public</id>
-            <url>https://repo.dustplanet.de/artifactory/ext-release-local/</url>
-        </repository>
     </repositories>
 
+    <!--
+      EssentialsX remains a mandatory runtime plugin dependency in plugin.yml.
+      Playtime reads the same Bukkit statistic used by EssentialsX /playtime,
+      so EssentialsX's implementation jar is not needed on the Maven compile classpath.
+      Vault is an optional runtime integration loaded reflectively.
+    -->
     <dependencies>
         <dependency>
             <groupId>io.papermc.paper</groupId>
@@ -45,21 +43,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>net.essentialsx</groupId>
-            <artifactId>EssentialsX</artifactId>
-            <version>2.22.0</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>me.clip</groupId>
             <artifactId>placeholderapi</artifactId>
             <version>2.11.7</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.milkbowl.vault</groupId>
-            <artifactId>VaultAPI</artifactId>
-            <version>1.7.1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

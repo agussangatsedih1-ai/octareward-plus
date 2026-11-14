@@ -1,0 +1,88 @@
+events:
+  winter_festival_2026:
+    enabled: true
+    event-name: "Winter Festival"
+    season: WINTER
+    display-name: "&b❄ Winter Festival Gift"
+    material: BLUE_ICE
+    slot: 20
+    trigger:
+      type: CUSTOM
+      id: winter_festival_2026
+    availability:
+      auto-start: true
+      starts-at: "2026-12-01T00:00:00+07:00"
+      ends-at: "2027-01-01T00:00:00+07:00"
+      claim-limit-per-player: 1
+    Lore:
+      - "&7A seasonal present from the winter court."
+      - "&b❄ Available during the Winter Festival."
+    actions:
+      - "[console] give %player% packed_ice 16"
+      - "[message] &b❄ The Winter Festival has blessed you!"
+
+  christmas_2026:
+    enabled: true
+    event-name: "Christmas Celebration"
+    season: CHRISTMAS
+    display-name: "&c✦ Yuletide Treasure"
+    material: GOLDEN_APPLE
+    slot: 22
+    trigger:
+      type: CUSTOM
+      id: christmas_2026
+    availability:
+      auto-start: true
+      starts-at: "2026-12-24T00:00:00+07:00"
+      ends-at: "2026-12-27T00:00:00+07:00"
+      claim-limit-per-player: 1
+    Lore:
+      - "&7A little warmth for the Yuletide season."
+      - "&c✦ Merry Christmas, adventurer!"
+    actions:
+      - "[console] give %player% golden_apple 3"
+      - "[message] &c✦ Happy Christmas!"
+
+  spring_bloom_2027:
+    enabled: true
+    event-name: "Spring Bloom"
+    season: SPRING
+    display-name: "&a✿ Springtime Blessing"
+    material: PINK_TULIP
+    slot: 24
+    trigger:
+      type: CUSTOM
+      id: spring_bloom_2027
+    availability:
+      auto-start: true
+      starts-at: "2027-03-01T00:00:00+07:00"
+      ends-at: "2027-04-01T00:00:00+07:00"
+      claim-limit-per-player: 1
+    Lore:
+      - "&7A flower-filled blessing for the arrival of spring."
+      - "&a✿ Celebrate new beginnings."
+    actions:
+      - "[console] give %player% emerald 12"
+      - "[message] &a✿ May your adventures bloom!"
+
+  easter_egg_hunt_2027:
+    enabled: true
+    event-name: "Easter Egg Hunt"
+    season: EASTER
+    display-name: "&d✧ Enchanted Easter Egg"
+    material: EGG
+    slot: 26
+    trigger:
+      type: CUSTOM
+      id: easter_egg_hunt_2027
+    availability:
+      auto-start: true
+      starts-at: "2027-03-25T00:00:00+07:00"
+      ends-at: "2027-03-29T00:00:00+07:00"
+      claim-limit-per-player: 1
+    Lore:
+      - "&7A mysterious egg hidden by the spring spirits."
+      - "&d✧ A limited Easter celebration reward."
+    actions:
+      - "[console] give %player% experience_bottle 16"
+      - "[message] &d✧ Happy Easter!"

@@ -1,0 +1,17 @@
+# Weekly rewards use an independent rolling cooldown (168 hours by default), following the DailyRewards-style cooldown model.
+rewards:
+  weekly_expedition:
+    enabled: true
+    display-name: "&b✦ Weekly Expedition Cache"
+    material: ENDER_CHEST
+    slot: 20
+    permission: ""
+    Lore:
+      - "&b✦ &fA week of journeys has earned you a well-stocked cache."
+      - "&8❖ &7This cache becomes available again 168 hours after your last claim."
+    premium-actions:
+      - "[console] give %player% diamond 4"
+      - "[message] &b✦ Premium weekly expedition cache unlocked!"
+    actions:
+      - "[console] give %player% emerald 8"
+      - "[message] &b✦ Weekly Expedition complete! Your supplies have arrived."
