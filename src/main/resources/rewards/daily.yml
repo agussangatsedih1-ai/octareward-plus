@@ -1,0 +1,14 @@
+rewards:
+  daily:
+    enabled: true
+    display-name: "&eDaily Supply"
+    material: CHEST
+    slot: 22
+    permission: ""
+    Lore:
+      - "&7A daily supply package."
+      - "&7Reset: &f00:00 Asia/Jakarta"
+      - "&aClick to claim"
+    actions:
+      - "[console] give %player% bread 8"
+      - "[message] &aYou received your daily supply!"

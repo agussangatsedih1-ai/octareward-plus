@@ -1,0 +1,3 @@
+# Database schema is versioned internally. SQLite is recommended for a single server.
+# Use MySQL/MariaDB for a multi-server network sharing the same database.
+schema-version: 2

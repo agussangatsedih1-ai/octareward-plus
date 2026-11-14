@@ -1,0 +1,40 @@
+rewards:
+  playtime_30m:
+    enabled: true
+    display-name: "&a30 Minute Milestone"
+    material: CLOCK
+    slot: 20
+    required-minutes: 30
+    repeat: false
+    Lore:
+      - "&7Play for 30 minutes."
+      - "&aClick to claim"
+
+    actions:
+      - "[console] give %player% iron_ingot 5"
+  playtime_60m:
+    enabled: true
+    display-name: "&e1 Hour Milestone"
+    material: GOLD_INGOT
+    slot: 22
+    required-minutes: 60
+    repeat: false
+    Lore:
+      - "&7Play for 60 minutes."
+      - "&aClick to claim"
+
+    actions:
+      - "[console] give %player% gold_ingot 5"
+  playtime_180m:
+    enabled: true
+    display-name: "&b3 Hour Milestone"
+    material: DIAMOND
+    slot: 24
+    required-minutes: 180
+    repeat: false
+    Lore:
+      - "&7Play for 180 minutes."
+      - "&aClick to claim"
+
+    actions:
+      - "[console] give %player% diamond 2"
