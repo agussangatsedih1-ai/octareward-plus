@@ -6,7 +6,7 @@
 
     <groupId>id.tempestaria</groupId>
     <artifactId>OctaRewardPlus</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.4-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>OctaReward Plus</name>
@@ -28,6 +28,10 @@
             <url>https://repo.helpch.at/releases</url>
         </repository>
         <repository>
+            <id>essentialsx-releases</id>
+            <url>https://repo.essentialsx.net/releases/</url>
+        </repository>
+        <repository>
             <id>jitpack</id>
             <url>https://jitpack.io</url>
         </repository>
@@ -38,6 +42,12 @@
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
             <version>1.21.11-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.essentialsx</groupId>
+            <artifactId>EssentialsX</artifactId>
+            <version>2.22.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
