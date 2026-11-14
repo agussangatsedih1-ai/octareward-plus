@@ -51,6 +51,10 @@ The plugin JAR is written to:
 target/OctaRewardPlus-0.0.1-SNAPSHOT.jar
 ```
 
+### GitHub Actions build
+
+The repository includes `.github/workflows/build.yml`. GitHub Actions automatically runs the Maven tests and package build when code is pushed, a pull request is opened or updated, or the workflow is started manually from the **Actions** tab. The generated plugin JAR is uploaded as a workflow artifact named `OctaRewardPlus-<commit-sha>` and can be downloaded from the completed workflow run.
+
 Paper API, PlaceholderAPI 2.11.7, and VaultAPI 1.7.1 use Maven `provided` scope and are not bundled. HikariCP, SQLite JDBC, and MySQL Connector/J are included in the output JAR by Maven Shade. UltimateRewards is deliberately **not** a compile-time dependency.
 
 ## Install

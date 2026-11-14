@@ -23,3 +23,8 @@ All notable changes to OctaReward Plus are documented in this file.
 - Paper API, PlaceholderAPI, and VaultAPI are provided dependencies and are not included in the plugin JAR.
 - UltimateRewards remains an optional runtime integration; its API compatibility must be checked against the exact server-side JAR.
 - A successful Maven build has not yet been verified in the preparation environment because Maven is unavailable there.
+## [0.0.1-SNAPSHOT] - 2026-11-14
+
+### Fixed
+- Corrected the Bukkit `EventExecutor` import in the optional UltimateRewards bridge.
+
