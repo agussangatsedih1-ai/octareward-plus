@@ -1,0 +1,42 @@
+events:
+  weekend_bonus:
+    enabled: true
+    display-name: "&6Weekend Adventure"
+    material: SUNFLOWER
+    slot: 22
+    trigger:
+      type: CUSTOM
+      id: weekend_adventure
+    availability:
+      starts-at: "2026-01-01T00:00:00+07:00"
+      ends-at: "2027-01-01T00:00:00+07:00"
+      claim-limit-per-player: 1
+    Lore:
+      - "&7A limited-time event reward."
+      - "&eWait for an admin to activate the event."
+
+    actions:
+      - "[console] give %player% diamond 3"
+      - "[message] &aYou claimed Weekend Adventure!"
+
+  stone_collector:
+    enabled: true
+    display-name: "&aStone Collector"
+    material: STONE
+    slot: 24
+    trigger:
+      type: BLOCK_BREAK
+      id: collect_stone
+      target: STONE
+      world: ""
+      required-count: 10
+    availability:
+      starts-at: ""
+      ends-at: ""
+      claim-limit-per-player: 1
+    Lore:
+      - "&7Break 10 stone blocks to unlock this event reward."
+
+    actions:
+      - "[console] give %player% iron_ingot 4"
+      - "[message] &aStone Collector completed!"

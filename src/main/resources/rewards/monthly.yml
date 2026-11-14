@@ -1,0 +1,14 @@
+# Monthly rewards reset on the first day of each calendar month.
+rewards:
+  monthly_royal_supply:
+    enabled: true
+    display-name: "&6✧ Monthly Royal Supply"
+    material: NETHER_STAR
+    slot: 22
+    permission: ""
+    Lore:
+      - "&6✧ &fA royal treasury opens once each new month."
+      - "&8❖ &7Return when the calendar turns to claim its blessing."
+    actions:
+      - "[console] give %player% diamond 12"
+      - "[message] &6✧ Monthly Royal Supply claimed. May fortune follow you!"

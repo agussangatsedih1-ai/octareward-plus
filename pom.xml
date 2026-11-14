@@ -6,11 +6,11 @@
 
     <groupId>id.tempestaria</groupId>
     <artifactId>OctaRewardPlus</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>OctaReward Plus</name>
-    <description>Suprise me please</description>
+    <description>Turn every return into an adventure with daily treasures, weekly and monthly milestones, seasonal celebrations, and winding playtime and streak journeys.</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

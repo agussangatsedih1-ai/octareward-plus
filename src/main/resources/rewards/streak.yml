@@ -1,0 +1,164 @@
+# Streak rewards are granted automatically when a successful daily claim reaches a milestone.
+missed-day-policy: "RESET" # RESET, PAUSE, GRACE_PERIOD
+grace-days: 1
+milestones:
+  1:
+    enabled: true
+    slot: 0
+    display-name: "&d✦ First Ember"
+    material: COAL
+    Lore:
+      - "&d✧ &fThe first ember answers your return."
+      - "&8❖ &7A promise is born from one faithful day."
+    actions:
+      - "[console] give %player% coal 4"
+  2:
+    enabled: true
+    slot: 1
+    display-name: "&d✦ Kindled Promise"
+    material: TORCH
+    Lore:
+      - "&d✦ &fTwo sparks now guard your growing resolve."
+      - "&8❖ &7Let tomorrow find your flame still burning."
+    actions:
+      - "[console] give %player% torch 8"
+  3:
+    enabled: true
+    slot: 2
+    display-name: "&d✦ Steadfast Adventurer"
+    material: IRON_INGOT
+    Lore:
+      - "&b✧ &fThree days have shaped a steady rhythm."
+      - "&8❖ &7Consistency is the first true treasure."
+    actions:
+      - "[console] give %player% iron_ingot 4"
+  5:
+    enabled: true
+    slot: 4
+    display-name: "&d✦ Copper Resolve"
+    material: COPPER_INGOT
+    Lore:
+      - "&6✦ &fCopper resolve glows beneath your footsteps."
+      - "&8❖ &7Five returns have strengthened your oath."
+    actions:
+      - "[console] give %player% copper_ingot 12"
+  7:
+    enabled: true
+    slot: 6
+    display-name: "&d✦ Weeklong Devotion"
+    material: DIAMOND
+    Lore:
+      - "&b✧ &fA full week has crowned your devotion."
+      - "&8❖ &7Your promise now shines like a diamond."
+    actions:
+      - "[console] give %player% diamond 1"
+  10:
+    enabled: true
+    slot: 9
+    display-name: "&d✦ Emerald Oath"
+    material: EMERALD
+    Lore:
+      - "&a✦ &fTen dawns have witnessed your determination."
+      - "&8❖ &7The emerald oath is yours to carry."
+    actions:
+      - "[console] give %player% emerald 4"
+  14:
+    enabled: true
+    slot: 13
+    display-name: "&d✦ Amethyst Heart"
+    material: AMETHYST_SHARD
+    Lore:
+      - "&d✧ &fTwo weeks of resolve crystallize into amethyst."
+      - "&8❖ &7Your streak has become a force of its own."
+    actions:
+      - "[console] give %player% amethyst_shard 16"
+  21:
+    enabled: true
+    slot: 20
+    display-name: "&d✦ Three-Week Vanguard"
+    material: GOLD_INGOT
+    Lore:
+      - "&6✦ &fThree weeks have named you a vanguard."
+      - "&8❖ &7A golden tribute to an unbroken routine."
+    actions:
+      - "[console] give %player% gold_ingot 12"
+  30:
+    enabled: true
+    slot: 29
+    display-name: "&d✦ Monthly Legend"
+    material: NETHER_STAR
+    Lore:
+      - "&5✧ &fA month of returns has entered the legends."
+      - "&8❖ &7The stars remember your steadfast promise."
+    actions:
+      - "[console] give %player% nether_star 1"
+  45:
+    enabled: true
+    slot: 44
+    display-name: "&d✦ Lapis Oracle"
+    material: LAPIS_LAZULI
+    Lore:
+      - "&9✦ &fThe lapis oracle recognizes your long vigil."
+      - "&8❖ &7Forty-five days have sharpened your spirit."
+    actions:
+      - "[console] give %player% lapis_lazuli 32"
+  60:
+    enabled: true
+    slot: 59
+    display-name: "&d✦ Diamond Sentinel"
+    material: DIAMOND
+    Lore:
+      - "&b✧ &fTwo months of loyalty stand like a fortress."
+      - "&8❖ &7A sentinel’s prize for an unwavering heart."
+    actions:
+      - "[console] give %player% diamond 4"
+  90:
+    enabled: true
+    slot: 89
+    display-name: "&d✦ Seasoned Sovereign"
+    material: EMERALD_BLOCK
+    Lore:
+      - "&a✦ &fA season has passed beneath your banner."
+      - "&8❖ &7The sovereign’s reward honors your patience."
+    actions:
+      - "[console] give %player% emerald_block 2"
+  120:
+    enabled: true
+    slot: 119
+    display-name: "&d✦ Ancient Pathfinder"
+    material: ANCIENT_DEBRIS
+    Lore:
+      - "&c✧ &fAncient stone yields to your perseverance."
+      - "&8❖ &7Four months have carved your name into the trail."
+    actions:
+      - "[console] give %player% ancient_debris 2"
+  180:
+    enabled: true
+    slot: 179
+    display-name: "&d✦ Eternal Flame"
+    material: BLAZE_ROD
+    Lore:
+      - "&6✦ &fHalf a year feeds the eternal flame."
+      - "&8❖ &7Your dedication burns beyond ordinary time."
+    actions:
+      - "[console] give %player% blaze_rod 16"
+  240:
+    enabled: true
+    slot: 239
+    display-name: "&d✦ Celestial Keeper"
+    material: TOTEM_OF_UNDYING
+    Lore:
+      - "&d✧ &fEight months have raised you among the celestials."
+      - "&8❖ &7A guardian’s prize for a truly rare streak."
+    actions:
+      - "[console] give %player% totem_of_undying 1"
+  365:
+    enabled: true
+    slot: 364
+    display-name: "&d✦ Year of Legends"
+    material: BEACON
+    Lore:
+      - "&b✦ &fA full year of returns becomes a legend."
+      - "&8❖ &7The beacon marks your place among the enduring."
+    actions:
+      - "[console] give %player% beacon 1"
