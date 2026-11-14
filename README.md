@@ -5,7 +5,7 @@ A configurable reward progression suite for Paper servers. Build daily habits, c
 ## Project metadata
 
 - **Plugin ID:** `OctaRewardPlus`
-- **Version:** `1.0.2-SNAPSHOT`
+- **Version:** `1.0.3-SNAPSHOT`
 - **Author:** `Alvran`
 - **Description:** Turn every return into an adventure with daily treasures, weekly and monthly milestones, seasonal celebrations, and winding playtime and streak journeys.
 - **Target:** Paper 1.21.11 / Java 21
@@ -47,7 +47,7 @@ mvn --batch-mode clean test package
 The plugin JAR is written to:
 
 ```text
-target/OctaRewardPlus-1.0.2-SNAPSHOT.jar
+target/OctaRewardPlus-1.0.3-SNAPSHOT.jar
 ```
 
 The GitHub Actions workflow is located at `.github/workflows/build.yml`. It runs tests and packages the plugin on pushes, pull requests, and manual workflow dispatches, then uploads the JAR as a downloadable workflow artifact.
@@ -248,3 +248,41 @@ Database-backed API methods return `CompletableFuture`. Do not call `.get()` or 
 ## Compatibility and testing notes
 
 The plugin is intended for Paper 1.21.11 and Java 21. The project includes unit tests for date and playtime calculations. The Maven source package must be built in CI or on a Maven-enabled machine to verify dependency resolution, compile compatibility, tests, and final shaded JAR output.
+
+
+## Version 1.0.3-SNAPSHOT
+
+- Rebuilt the GUI into four top-level sections: Basic Reward, Daily Streak, Playtime Reward, and Extra Reward.
+- Basic Reward contains Daily Reward (Daily / Weekly / Monthly) and Supporter Reward (configurable rank rewards).
+- Extra Reward contains Seasonal Reward collections.
+- All inventory menus use six rows (54 slots).
+- Item display and lore components explicitly disable Minecraft's default italic styling.
+- Playtime rewards now include 1-hour through 100-hour milestones.
+- Daily streak milestones are configured for every day from 1 through 100 and are granted automatically on the matching consecutive day.
+- Supporter rewards are permission-gated and work with LuckPerms through Bukkit permission checks (for example `group.vip`).
+- Daily, weekly, and monthly reward menus display their next reset countdown in the item lore.
+- Reward menus use a dark purple / magenta / black glass-pane palette.
+
+### Supporter reward configuration
+
+Add rank entries under `ranks:` in `plugins/OctaRewardPlus/rewards/supporter.yml`. Each entry supports `display-name`, `material`, `permission`, `Lore`, and `actions`. Rewards are claimable once per player.
+
+
+### Supporter placeholders
+
+- `%octarewardplus_reward_claimed_supporter_supporter_vip%` returns `true` or `false`.
+- `%octarewardplus_reward_state_supporter_supporter_vip%` returns `CLAIMED`, `AVAILABLE`, or `LOCKED`.
+- `%octarewardplus_reward_available_supporter_supporter_vip%` returns `true` or `false`.
+
+The same dynamic reward placeholders are available through the legacy `%dailyreward_...%` identifier.
+
+
+### Database build profiles and plugin size
+
+The default Maven build targets SQLite and does not bundle the MySQL Connector/J driver, keeping the default plugin artifact smaller. If `storage.yml` is configured with `type: MYSQL`, build the MySQL-enabled artifact with:
+
+```bash
+mvn -Pmysql clean test package
+```
+
+The GitHub Actions workflow publishes both variants as separate artifacts. Paper API, PlaceholderAPI, and Vault API remain provided dependencies and are not bundled into the plugin JAR.

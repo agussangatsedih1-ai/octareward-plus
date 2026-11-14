@@ -1,3 +1,17 @@
+## [1.0.3-SNAPSHOT] - 2026-11-14
+
+### Added
+- Nested reward navigation for Basic Reward, Daily Streak, Playtime Reward, and Extra Reward.
+- Daily / Weekly / Monthly submenu and configurable Supporter Rank Reward catalog.
+- LuckPerms-compatible permission checks for supporter rank rewards.
+- 100 hourly playtime milestones and 100 daily streak milestones.
+- Reset countdown lore for daily, weekly, and monthly rewards.
+
+### Changed
+- Standardized all menus to six rows (54 slots).
+- Disabled default italic decoration on plugin-generated item names and lore.
+- Updated glass-pane decoration to a dark jewel palette.
+
 # Changelog
 
 All notable changes to OctaReward Plus are documented here.
