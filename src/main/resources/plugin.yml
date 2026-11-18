@@ -1,0 +1,51 @@
+name: OctaRewardPlus
+prefix: "OctaReward Plus"
+version: "1.0.5-SNAPSHOT"
+main: id.tempestaria.dailyreward.DailyRewardPlugin
+api-version: '1.21'
+authors: [Alvran]
+description: "Turn every return into an adventure with daily treasures, weekly and monthly milestones, seasonal celebrations, and winding playtime and streak journeys."
+depend: [Essentials]
+softdepend: [PlaceholderAPI, Vault, LuckPerms]
+commands:
+  dailyreward:
+    description: Open the OctaReward Plus menu.
+    aliases: [daily, reward, dailyrewards, rewards, dr, orp, octarewardplus]
+    usage: /dailyreward [daily|weekly|monthly|streak|playtime|events|supporter|reload|stats|give|reset|event]
+permissions:
+  dailyreward.use:
+    default: true
+  dailyreward.admin:
+    default: op
+  dailyreward.reload:
+    default: op
+  dailyreward.give:
+    default: op
+  dailyreward.reset:
+    default: op
+  dailyreward.event.manage:
+    default: op
+  dailyreward.streak.bypass:
+    default: op
+  dailyreward.cooldown.bypass:
+    default: op
+  dailyreward.playtime.bypass:
+    default: op
+  dailyreward.daily.premium:
+    default: false
+  dailyreward.weekly.premium:
+    default: false
+  dailyreward.monthly.premium:
+    default: false
+  octarewardplus.supporter.vip:
+    default: false
+  octarewardplus.supporter.elite:
+    default: false
+  octarewardplus.supporter.legend:
+    default: false
+  octarewardplus.claim.support.vip:
+    default: false
+  octarewardplus.claim.support.elite:
+    default: false
+  octarewardplus.claim.support.legend:
+    default: false

@@ -1,0 +1,77 @@
+time:
+  timezone: "Asia/Jakarta"
+  daily-reset: "00:00"
+  date-format: "dd MMM yyyy HH:mm"
+
+storage:
+  type: "SQLITE" # SQLITE or MYSQL
+  sqlite-file: "data/octarewardplus.db"
+  mysql:
+    host: "127.0.0.1"
+    port: 3306
+    database: "octarewardplus"
+    username: "root"
+    password: "change-me"
+    use-ssl: false
+    maximum-pool-size: 10
+
+playtime:
+  source: "ESSENTIALSX_STATISTIC" # Mirrors EssentialsX /playtime using Bukkit's persisted playtime statistic.
+  sync-interval-seconds: 60
+
+periodic-rewards:
+  daily:
+    enabled: true
+    cooldown-hours: 24
+    cooldown-format: "%hours%:%minutes%:%seconds%"
+    premium-permission: "dailyreward.daily.premium"
+  weekly:
+    enabled: true
+    cooldown-hours: 168
+    cooldown-format: "%days% days %hours% hours %minutes% minutes"
+    premium-permission: "dailyreward.weekly.premium"
+  monthly:
+    enabled: true
+    cooldown-hours: 720
+    cooldown-format: "%days% days %hours% hours %minutes% minutes"
+    premium-permission: "dailyreward.monthly.premium"
+  supporter:
+    enabled: true
+    cooldown-hours: 24
+
+reminders:
+  enabled: false
+  interval-minutes: 60
+
+actions:
+  allow-player-commands: false
+  use-placeholderapi: true
+
+gui:
+  main-title: "&8✦ &bOctaReward Plus"
+  category-title: "&8✦ &b%category%"
+  size: 54
+  main-size: 54
+  filler:
+    enabled: true
+    material: BLACK_STAINED_GLASS_PANE
+    name: "&8✦"
+  main-slots:
+    daily: 10
+    weekly: 11
+    monthly: 12
+    streak: 14
+    playtime: 15
+    events: 16
+    onetime: 22
+  back-slot: 49
+  previous-slot: 45
+  next-slot: 53
+  refresh-on-open: true
+
+integrations:
+  vault:
+    enabled: true
+    required: false
+
+debug: false

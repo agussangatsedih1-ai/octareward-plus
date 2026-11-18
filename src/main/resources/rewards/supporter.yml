@@ -1,0 +1,42 @@
+# Premium daily caches shown inside Basic Reward > Daily Reward.
+# Each configured cache has its own 24-hour cooldown by default.
+# Use luckperms-group for direct group membership checks, or permission for a custom node.
+# When luckperms-group is set, the plugin also accepts:
+# octarewardplus.claim.support.<group>
+ranks:
+  supporter_vip:
+    enabled: true
+    display-name: "&b✦ &lVIP Supporter Cache"
+    material: DIAMOND
+    slot: 20
+    luckperms-group: "vip"
+    Lore:
+      - "&b✧ &fA daily gift reserved for the VIP rank."
+      - "&8❖ &7Requires LuckPerms group: vip"
+      - "&e⌁ &7Claimable again after 24 hours."
+    actions:
+      - "[console] give %player% diamond 8"
+  supporter_elite:
+    enabled: true
+    display-name: "&d✦ &lElite Supporter Cache"
+    material: AMETHYST_BLOCK
+    slot: 22
+    luckperms-group: "elite"
+    Lore:
+      - "&d✧ &fA daily cache for the Elite rank."
+      - "&8❖ &7Requires LuckPerms group: elite"
+      - "&e⌁ &7Claimable again after 24 hours."
+    actions:
+      - "[console] give %player% emerald 16"
+  supporter_legend:
+    enabled: true
+    display-name: "&6✦ &lLegend Supporter Cache"
+    material: NETHER_STAR
+    slot: 24
+    luckperms-group: "legend"
+    Lore:
+      - "&6✧ &fA prestigious daily gift for the Legend rank."
+      - "&8❖ &7Requires LuckPerms group: legend"
+      - "&e⌁ &7Claimable again after 24 hours."
+    actions:
+      - "[console] give %player% nether_star 1"

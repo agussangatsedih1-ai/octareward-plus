@@ -2,10 +2,25 @@
 
 All notable changes to OctaReward Plus are documented here.
 
+## [1.0.5-SNAPSHOT] - 2026-11-18
+
+### Fixed
+- Fixed Daily, Weekly, and Monthly category buttons so they open their reward claim pages instead of doing nothing.
+- Removed the duplicate cooldown line from the Daily Reward category selector.
+- Moved Supporter rewards into the Daily Reward selector as Premium Supporter rewards.
+- Changed Supporter caches from one-time claims to independent 24-hour rolling cooldowns per configured rank reward.
+- Added `luckperms-group` support with inherited LuckPerms group checks and the `octarewardplus.claim.support.<group>` permission route.
+- Changed Daily Streak milestones to manual claims after the player's best streak reaches the corresponding day; previously reached milestones stay unlocked.
+- Standardized the 100-day Streak and 100-hour Playtime boards to glass panes: green for claimed, yellow for available, and red for locked.
+- Kept Playtime claims disabled until the player's live EssentialsX-compatible playtime meets the configured requirement.
+
+### Changed
+- Updated Maven and plugin metadata to `1.0.5-SNAPSHOT`.
+
 ## [1.0.4-SNAPSHOT] - 2026-11-14
 
 ### Added
-- Declared EssentialsX as a mandatory runtime dependency and added its Maven API dependency with `provided` scope.
+- Declared EssentialsX as a mandatory runtime dependency; the playtime integration reads Bukkit player statistics directly.
 - Added an EssentialsX-compatible playtime source that reads the same persisted Bukkit statistic as `/playtime`.
 - Added regular and premium action lists for Daily, Weekly, and Monthly rewards, selected by configurable permissions.
 - Added explicit 24-hour, 168-hour, and 720-hour default cooldowns for Daily, Weekly, and Monthly rewards.
@@ -13,7 +28,7 @@ All notable changes to OctaReward Plus are documented here.
 ### Changed
 - Changed Daily, Weekly, and Monthly claims to use separate rolling cooldowns measured from each successful claim, following the independent cooldown model in the Athelion-Development DailyRewards reference.
 - Set Playtime Reward defaults to one milestone per hour from 1 through 100 hours.
-- Set Daily Streak defaults to one milestone for each consecutive day from day 1 through day 100; each reached day is rewarded automatically by a successful daily claim.
+- Set Daily Streak defaults to one milestone for each consecutive day from day 1 through day 100.
 - Updated GUI cooldown displays and PlaceholderAPI status values to use the active cooldown timestamps.
 - Updated the README, Maven metadata, and plugin description for version 1.0.4-SNAPSHOT.
 
